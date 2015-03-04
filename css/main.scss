@@ -1,0 +1,78 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+.site-header {
+	background-color: rgb(90,170,211);
+}
+
+.site-footer {
+	background-color: rgb(90,170,211);
+}
+
+// .page-content {
+// 	background-color: rgb(252,241,228);
+// }
+// .site-header {
+// 	background: linear-gradient(bottom, rgba(150,12, 122,.9), rgba(150,12, 122,.6));
+// 	background: -webkit-linear-gradient(bottom, rgba(150,12, 122,.9), rgba(150,12, 122,.6));
+// 	background: -moz-linear-gradient(bottom, rgba(150,12, 122,.9), rgba(150,12, 122,.6));
+// }
+
+// .site-footer {
+// 	background: linear-gradient(bottom, rgba(128,0,0,.9), rgba(128,0,0,.6));
+// 	background: -webkit-linear-gradient(bottom, rgba(128,0,0,.9), rgba(128,0,0,.6));
+// 	background: -moz-linear-gradient(bottom, rgba(128,0,0,.9), rgba(128,0,0,.6));
+// }
+
+
+a {
+	color: black;
+}
+// Our variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
