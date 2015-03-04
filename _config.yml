@@ -5,10 +5,8 @@ description: > # this means to ignore newlines until "baseurl:"
   A little about me and my dive into programming!
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://s12dsow.github.io/blog" # the base hostname & protocol for your site
-paginate: 10
 twitter_username: s12dsow
 github_username:  s12dsow
 
 # Build settings
 markdown: kramdown
-encoding: utf-8
